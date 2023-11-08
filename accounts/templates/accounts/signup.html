@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load django_bootstrap5 %}
+{% block main %}
+  <h1>スニペット登録</h1>
+  <form method='post'>
+    {% csrf_token %}
+    {% comment %} {{form.as_p}} {% endcomment %}
+    {% bootstrap_form form%}
+    {% comment %} <button type='submit'>登録</button> {% endcomment %}
+    {% bootstrap_button button_type="submit" content="登録"%}
+  </form>
+{% endblock %}
